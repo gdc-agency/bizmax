@@ -1,0 +1,343 @@
+.cs_nav .cs_nav_list span.cs-munu_dropdown_toggle.active + ul,
+.cs_nav .cs-munu_toggle.cs_teggle_active + .cs_nav_list {
+  display: block;
+}
+
+.cs_site_header.cs_color_1 {
+  .cs_header_search_btn {
+    color: initial;
+    @media (max-width: 575px) {
+      display: none !important;
+    }
+  }
+}
+
+.cs_header_search_form {
+  @media (max-width: 767px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+.cs_header_search_btn {
+  @media (max-width: 575px) {
+    display: none !important;
+  }
+}
+
+.breadcrumb {
+  span {
+    color: $accent;
+  }
+  a {
+    color: $white;
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.fixed-bottom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.cs_pricing_control {
+  li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover,
+    &.active {
+      color: $accent;
+    }
+  }
+}
+
+.widget_categories ul li a {
+  padding-left: 0;
+  display: inline-flex;
+  align-items: center;
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.cs_single_product_thumb_item {
+  cursor: pointer;
+  img {
+    border: 1px solid transparent;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  }
+  &.active {
+    img {
+      border-color: $accent;
+    }
+  }
+}
+.cs_video_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  > * {
+    height: 100%;
+    width: 100%;
+    > iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 56.25vw;
+      width: 100vw;
+      @media (max-width: 1500px) {
+        height: 100%;
+        width: calc(100% + 200px);
+      }
+      @media (max-width: 1199px) {
+        width: 100vh;
+      }
+      @media (max-width: 575px) {
+        width: 200vh;
+      }
+    }
+  }
+}
+.cs_rating {
+  width: 78px;
+  position: relative;
+  i {
+    display: flex;
+  }
+  > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+  }
+  .cs_rating_percentage {
+    width: 50%;
+  }
+
+  .cs_rating_percentage,
+  .cs_rating_bg {
+    &::before {
+      display: none;
+    }
+  }
+  &.cs_size_sm {
+    width: 83px;
+    height: 15px;
+    position: relative;
+    font-size: 12px;
+    i {
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+    .cs_rating_bg,
+    .cs_rating_percentage {
+      display: flex;
+      overflow: hidden;
+    }
+    .cs_rating_bg {
+      opacity: 1;
+    }
+  }
+}
+
+.cs_accent_color {
+  color: $accent;
+}
+
+.multi-range-slider {
+  padding: 0;
+  border: 0;
+  margin-bottom: 10px;
+  box-shadow: none;
+
+  .bar {
+    height: 6px;
+  }
+
+  .bar-inner {
+    background: $accent;
+    box-shadow: none;
+    border: none;
+    z-index: 99;
+  }
+
+  .bar-inner-left,
+  .bar-inner-right,
+  .bar-left,
+  .bar-right {
+    box-shadow: none;
+    background-color: rgba(102, 102, 102, 0.3);
+    padding: 0;
+  }
+
+  .thumb {
+    height: 16px;
+    width: 10px;
+    border: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    &.thumb-left,
+    &.thumb-right {
+      border: none;
+      background: $accent;
+      border-radius: 2px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.cs_service_slider .cs_slider_activate {
+  @media (max-width: 574px) {
+    width: 100%;
+  }
+}
+
+.cs_team.cs_style_1 .cs_team_info h2 a {
+  color: $white;
+}
+
+.cs_single_thumb_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+// contact form iconbox
+.cs_iconbox_wrapper.cs_style1 > * {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+//video modal popup
+.cs_video_open {
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:hover {
+    color: $accent;
+  }
+}
+
+//slider
+.cs_slider_prev,
+.cs_slider_next {
+  cursor: pointer;
+}
+
+.cs_slider_btn {
+  cursor: pointer;
+}
+.cs_testimonial_slider,
+.cs_service_slider {
+  .cs_service.cs_style_1,
+  .cs_post.cs_style_1,
+  .cs_testimonial.cs_style_1 {
+    width: 100%;
+    max-width: initial;
+  }
+}
+.cs_testimonial_slider {
+  @media (max-width: 575px) {
+    .cs_slider_activate {
+      width: 100vw;
+    }
+    .col-lg-8 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .cs_gap_30 .slick-list {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.cs_service_slider {
+  .slick-track {
+    display: flex;
+  }
+}
+
+.cs_product_slider {
+  .slick-dots {
+    display: flex !important;
+    margin-bottom: 0;
+  }
+}
+
+.cs_testimonial_nav-active {
+  .slick-arrow {
+    position: absolute;
+    bottom: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 45px;
+    width: 45px;
+    background-color: $white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    transition: 0.3s ease-in-out;
+    @media (max-width: 991px) {
+      bottom: -65px;
+    }
+    &:hover {
+      background-color: $accent;
+    }
+    &.slick-prev {
+      left: 60px;
+    }
+    &.slick-next {
+      left: initial;
+      right: 10px;
+    }
+  }
+}
+.cs_token_expired {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  color: red;
+  line-height: 1.2em;
+}
+
+.bg-input-dark::placeholder {
+  color: #ccc;
+}
+select.form-control-2,
+select.cs_shop-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, #0000 50%, #666 0),
+    linear-gradient(135deg, #666 50%, #0000 0);
+  background-position: calc(100% - 17px) calc(1em + 10px),
+    calc(100% - 12px) calc(1em + 10px);
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px;
+  cursor: pointer;
+}
+select.cs_shop-input {
+  background-position: calc(100% - 17px) calc(1em + 7px),
+    calc(100% - 12px) calc(1em + 7px);
+}
+.multi-range-slider .thumb .caption * {
+  background-color: $accent;
+  box-shadow: none;
+}
